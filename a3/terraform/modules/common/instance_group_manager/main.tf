@@ -14,7 +14,7 @@
  * limitations under the License.
 */
 resource "google_compute_instance_group_manager" "mig" {
-  provider = google-beta
+  provider = google
 
   base_instance_name = var.resource_prefix
   name               = var.resource_prefix
