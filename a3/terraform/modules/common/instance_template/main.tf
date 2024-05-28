@@ -130,6 +130,11 @@ resource "google_compute_instance_template" "template" {
     provisioning_model   = null
   }
 
+  guest_accelerator {
+    type: nvidia-h100-80gb
+    count: 8
+  }
+
   service_account {
     email  = local.service_account.email
     scopes = local.service_account.scopes
