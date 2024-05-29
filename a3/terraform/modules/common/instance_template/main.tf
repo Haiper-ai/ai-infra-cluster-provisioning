@@ -131,8 +131,8 @@ resource "google_compute_instance_template" "template" {
   }
 
   guest_accelerator {
-    type: nvidia-h100-80gb
-    count: 8
+    type  = nvidia-h100-80gb
+    count = 8
   }
 
   service_account {
